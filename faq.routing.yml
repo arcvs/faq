@@ -1,0 +1,47 @@
+# Первым делом объявляется машинное имя роута. Оно составляетсям из:
+# название_модуля.машинное_название_роута.
+faq.topic_list:
+  # Указываем путь роута, с лидирующим слешем.
+  path: '/faq'
+  # Значения по умолчанию
+  defaults:
+    # Функция контроллера отвечающая за содержимое.
+    _controller: '\Drupal\faq\Controller\FAQController::listTopic'
+    # В данном разделе указываются необходимые требования для роута.
+  requirements:
+    # Мы будем показывать страницу только тем, у кого есть права на просмотр
+    # содержимого.
+    #_role: 'administrator'
+    #_permission: 'view content'
+    _access: 'TRUE'
+
+faq.topic_view:
+  # Указываем путь роута, с лидирующим слешем.
+  path: '/faq/topic/{id}'
+  # Значения по умолчанию
+  defaults:
+    # Функция контроллера отвечающая за содержимое.
+    _controller: '\Drupal\faq\Controller\FAQController::viewTopic'
+  # В данном разделе указываются необходимые требования для роута.
+  requirements:
+    # Мы будем показывать страницу только тем, у кого есть права на просмотр
+    # содержимого.
+    #_role: 'administrator'
+    #_permission: 'view content'
+    _access: 'TRUE'
+
+faq.topic_new:
+  # Указываем путь роута, с лидирующим слешем.
+  path: '/faq/new/topic'
+  # Значения по умолчанию
+  defaults:
+    # Функция контроллера отвечающая за содержимое.
+    _controller: '\Drupal\faq\Controller\FAQController::newTopic'
+    # В данном разделе указываются необходимые требования для роута.
+  requirements:
+    # Мы будем показывать страницу только тем, у кого есть права на просмотр
+    # содержимого.
+    #_role: 'administrator'
+    #_permission: 'view content'
+    _access: 'TRUE'
+

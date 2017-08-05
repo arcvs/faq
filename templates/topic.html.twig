@@ -1,0 +1,26 @@
+{% if current_topic %}
+
+<a href='/faq'>Вернуться к списку вопросов</a>
+
+  {% for item in current_topic %}
+    <h1> {{ item.question }} </h1>
+    <p> {{ item.answer }} </p>
+  {% else %}
+    <p>Вопроса не существует</p>
+  {% endfor %}
+
+{% elseif list_topics %}
+
+  <h2>Часто задаваемывые вопросы (FAQ):</h2>
+  <br>
+
+  {% for item in list_topics %}
+    <p> <strong><a href={{'/faq/topic/' ~ item.id}}>{{ item.question }}</a></strong> </p>
+  {% else %}
+    <p>Задайте вопрос если Вас что то интересует</p>
+  {% endfor %}
+
+{% endif %}
+
+<hr>
+<p><a href='/faq/new/topic'>Задайте вопрос</a> если не нашли ответ.</p>

@@ -1,0 +1,14 @@
+faq.main:
+  title: 'FAQ'
+  description: 'Список часто задаваемых вопросов и ответов'
+  menu_name: main
+  route_name: faq.topic_list
+  weight: 100
+
+#guestforum.topic:
+  #title: 'Guest forum'
+  #description: 'Guest forum'
+  #parent: main
+  #route_name: guestforum.topic
+  #route_parameters: { topic: 'value' }
+  #weight: 100
